@@ -24,19 +24,17 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: npm
+          node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        # On supprime le lock pour forcer npm à résoudre
+        # les binaires natifs corrects pour Linux
+        run: rm -f package-lock.json && npm install
 
       - name: Build
         env:
           VITE_BASE_URL: /44L/
         run: npm run build
-
-      - name: Verify dist
-        run: ls dist && cat dist/index.html | head -5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
