@@ -28,13 +28,15 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build
-        # ⚠️  Remplace NOM-DU-REPO par le nom exact de ton dépôt GitHub
         env:
           VITE_BASE_URL: /44L/
         run: npm run build
+
+      - name: Verify dist
+        run: ls dist && cat dist/index.html | head -5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
