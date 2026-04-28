@@ -1,5 +1,5 @@
 {
-  "name": "untitled",
+  "name": "44l-trophy",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -12,16 +12,14 @@
   "dependencies": {
     "@vue-leaflet/vue-leaflet": "^0.10.1",
     "leaflet": "^1.9.4",
-    "tailwind": "^4.0.0",
-    "vue": "^3.5.31",
-    "vue-leaflet": "^0.1.0"
+    "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^6.0.5",
-    "vite": "^8.0.3",
-    "vite-plugin-vue-devtools": "^8.1.1"
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^5.4.14",
+    "vite-plugin-vue-devtools": "^7.7.2"
   },
   "engines": {
-    "node": "^20.19.0 || >=22.12.0"
+    "node": ">=18.0.0"
   }
 }
